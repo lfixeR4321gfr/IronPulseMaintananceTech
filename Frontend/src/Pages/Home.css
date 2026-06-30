@@ -1,0 +1,47 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:rgb(134, 134, 147);
+    text-decoration: none;
+    
+}
+
+marquee{
+    color:red;
+    padding-top:40px;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.home h1{
+font-size: 24px;
+color: #6a07e4;
+text-align: center;
+margin:40px;
+
+}
+p{
+    text-align: center;
+    display: grid;
+}
+
+
+.home{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../assets/Zanzibar.jpeg");
+    
+    background-position: center;
+    background-size: cover;
+    
+    color: #dcdde3;
+    
+
+}
+
+
