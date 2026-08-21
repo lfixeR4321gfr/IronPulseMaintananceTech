@@ -1,0 +1,111 @@
+ *{
+    text-decoration: none;
+
+ }
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+.Login-Form{
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0,15);
+
+    
+}
+
+.Login-Form h2{
+    text-align: center;
+    margin-bottom:25px;
+    
+ 
+}
+
+.input-groupp label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-groupp input{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px green;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-groupp input:hover{
+box-shadow: 1px 1px 2px 3px green;
+}
+
+.Login-Form button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(28, 47, 169);
+    color: aliceblue;
+    font-size: 16px;
+    cursor: wait;
+
+
+}
+.Login-Form button:hover{
+    background-color: green;
+
+}
+
+.Login-Form p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+
+}
+
+@media(max-width:480px){
+    .Login-Form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+
+/* 
+.Lbutton{
+ align-items: center;
+ text-align: center;
+
+    
+}
+
+input{
+    width:90%;
+    padding:15px;
+    margin:20px;
+    font-size:20px;
+    border-radius:15px;
+    font-weight: bold;
+    border-color: green;
+    box-shadow: 4px 4px 4px rgb(162, 164, 163);
+
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left:20px;
+}
+ */ */

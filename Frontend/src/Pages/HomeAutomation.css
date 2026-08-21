@@ -1,0 +1,14 @@
+*{
+
+}
+.Automations{
+    
+    height: 100vh;
+    background-color: gray;
+}
+
+.Automations h2{
+    color: red;
+    text-align: center;
+    margin-top: 2rem;
+}

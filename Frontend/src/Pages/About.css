@@ -1,0 +1,10 @@
+*{
+
+}
+.about{
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+.schendule table{
+    background-color: rgb(129, 124, 179);
+}

@@ -3,45 +3,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
+    height: 400vh;
     font-family: Arial, sans-serif;
-    background:rgb(134, 134, 147);
-    text-decoration: none;
+
+    
+    
+}
+
+.home{
+    height: 200vh;
+    /* background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../assets/ECU.png"); */
+    
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(10, 10, 58);
     
 }
 
 marquee{
-    color:red;
-    padding-top:40px;
+    color:rgb(0, 255, 38);
+    margin-top: 2rem;
     font-size:20px;
     font-weight: bold;
-}
-
-.home h1{
-font-size: 24px;
-color: #6a07e4;
-text-align: center;
-margin:40px;
 
 }
-p{
+
+.Title{
+    color: rgb(10, 225, 225);
+    font-size:24px;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
+    margin-top: 4rem;
+    
+}
+
+.article{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:2em;  
+    
+}
+
+.Card{
+    width: 80%;
+    background:rgb(240, 255, 241);
+    border-radius:18px;
+    margin:2.5rem;
+    text-align: center;
+    box-shadow: 1px 1px 2px 5px rgb(115, 112, 112);
+    transition:1s ;
+    
+}
+
+.Card:hover{
+    margin-bottom: 4rem;
+    box-shadow: 2px 2px 3px 5px green;
+    
+}
+
+.Card h3{
+    font-size:24px;
+    color: rgb(5, 10, 145);
+    transition: 1s;
+
+    
+}
+.Card h3:hover{
+    border-bottom: 2px solid aqua;
+    color: rgb(19, 32, 213);
+
+}
+
+.Card p{
+    font-size:24px;
+    color: rgb(4, 11, 25);
+    padding-top: 1rem;
+    
+}
+.Card img{
+    width: 100%;
+    height: 18rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    transition: transform 1s ease;
+}
+.Card img:hover{
+    transform: scale(1.2);
+    box-shadow: 1px 1px 2px 2px aqua;
 }
 
 
-.home{
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../assets/Zanzibar.jpeg");
+.Card button{
+    font-size:24px;
+    color: white;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+    border-radius: 16px;
+    background-color: rgb(44, 7, 145);
+    cursor: wait;
+    transition:transform 1s ease;
     
-    background-position: center;
-    background-size: cover;
-    
-    color: #dcdde3;
-    
-
 }
 
+.Card button:hover{
+    transform: scale(1.1);
+    background-color: green;
 
+}

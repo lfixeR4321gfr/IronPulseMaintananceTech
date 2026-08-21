@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
+}
+
+
+.Register-container{
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+
+    
+    
+    
+}
+.Register-Form{
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 3rem;
+
+    
+}
+.Register-Form h2{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(121, 17, 212);
+    margin-bottom: 2rem;
+}
+
+.input-group label{
+    margin-top: 10px;
+    font-size: 19px;
+    display: block;
+    font-weight: bold;
+
+}
+
+.input-group input{
+    
+    width: 100%;
+    margin: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px green;
+    outline: none;
+    
+
+
+}
+.input-group input:hover{
+box-shadow: 1px 1px 2px 3px rgb(7, 235, 10);
+}
+.input-group button{
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    font-size: 18px;
+    color: aliceblue;
+    cursor: wait;
+    transition: 1s;
+}
+.input-group button:hover{
+ background-color: green;
+}
+
+.Register-Form p{
+    font-size: 20px;
+    margin-top: 1rem;
+
+}

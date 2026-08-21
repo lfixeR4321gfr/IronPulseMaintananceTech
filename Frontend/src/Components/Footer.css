@@ -1,14 +1,71 @@
 .footer{
     font-size:20px;
-    background:rgb(182, 192, 185);
-    margin-top:50%;
+    background:rgb(74, 74, 89);
     padding:40px;
-    text-align: center;
-    border-top: 5px solid;
-    border-color: aqua;
+    border-top: 4px solid rgb(8, 23, 235);
+    bottom:0%;
+}
+.footer-box{
+  display: flex;
+  gap: 10rem;
+}
 
+.promo h2{
+  color: rgb(233, 11, 240);
+  font-style: italic;
+}
+.promo p{
+  color: aqua;
+}
+
+.promo li{
+  color: aliceblue;
+}
+
+.contact h2{
+  color: rgb(238, 10, 208);
+  font-style: italic;
+}
+.contact li a{
+  color: aliceblue;
+}
+
+.contact li a:hover{
+  color: green;
+}
+
+.copyright p{
+  font-size: 18px;
+  color: aliceblue;
+  text-align: center;
+  border-top: 1px solid aliceblue;
+  font-style: italic;
+
+
+  
+}
+.quick-links h2{
+  color: rgb(243, 8, 169);
+  font-style: italic;
+}
+.quick-links a{
+  font-size: 18px;
+  color: aliceblue;
+  font-weight: bold;
 
 }
+.quick-links a:hover{
+  color: green;
+}
+
+@media(max-width:480px){
+  .footer{
+    width: 100%;
+  }
+}
+
+
+
 
 /* 
 
