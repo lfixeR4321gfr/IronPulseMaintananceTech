@@ -1,4 +1,4 @@
-import Map from "../Components/Map";
+import Map from "../../Components/Map";
 
 function Location() {
 

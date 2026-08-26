@@ -1,0 +1,184 @@
+.admin-sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+
+/* 
+NAVIGATION
+ */
+
+.admin-sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* 
+SECTION
+*/
+
+.sidebar-section {
+    margin-top: 20px;
+}
+
+.sidebar-section-title {
+    padding: 0 12px 8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+    color: #9ca3af;
+}
+
+
+/* =====================================
+SIDEBAR LINK
+===================================== */
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+    width: 100%;
+    padding: 11px 13px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    text-decoration: none;
+
+    
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Icon */
+
+.sidebar-link svg {
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+
+/* Hover */
+
+.sidebar-link:hover {
+    background: #f3f4f6;
+
+    color: #050c1a;
+}
+
+
+/* Active */
+
+.sidebar-link.active {
+    color: #0cf16b;
+
+}
+
+
+/* =====================================
+USER
+===================================== */
+
+.admin-sidebar-user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 5px;
+
+    border-top: 1px solid #e5e7eb;
+
+    margin-top: 10px;
+}
+
+
+
+/* =====================================
+LOGOUT
+===================================== */
+
+.admin-logout {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+
+    padding: 11px 13px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #bac1d1;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    transition: 0.2s ease;
+
+}
+
+.admin-logout:hover {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+
+/* =====================================
+SCROLLBAR
+===================================== */
+
+.admin-sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.admin-sidebar-nav::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .admin-sidebar {
+        width: 240px;
+
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+    }
+
+}

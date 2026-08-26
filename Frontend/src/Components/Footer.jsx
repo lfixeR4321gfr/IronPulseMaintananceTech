@@ -11,17 +11,14 @@ function Footer() {
       <div className="promo">
         <h2> Meet your trusted patners in Zanzibar</h2>
        
-      
       <ul>
-        <p>We deals with 👎</p>
+        <p>We deals with!👎</p>
         <li>Electrical car diagnosis</li>
         <li>Motor and pumps maintanace</li>
-        <li> Home automation</li>
+        <li>Home automation</li>
       </ul>
-      </div>
-
-
-
+        </div>
+        
       <div className="contact">
         <h2>Contact</h2>
 

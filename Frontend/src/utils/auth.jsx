@@ -14,7 +14,7 @@ export const register =() =>{
 };
 
 //User logout
-export const logout =() =>{
+export const logout =() =>{ 
 
     //removing token from the browser
     localStorage.removeItem("token");

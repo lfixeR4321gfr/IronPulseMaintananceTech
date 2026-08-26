@@ -1,0 +1,30 @@
+
+.client-layout {
+    display: flex;
+    min-height: 140vh;
+    width: 100%;
+}
+
+/* 
+   MAIN CONTENT
+ */
+
+.client-main {
+    flex: 1;
+    min-height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #e3e7ea;
+}
+
+.sidebar-toggle{
+    position: fixed;
+    width: 42px;
+    top: 13%;
+    left: 0%;
+}
+
+.sidebar-toggle:hover{
+    
+    background: green;
+}

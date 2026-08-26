@@ -1,25 +1,4 @@
-// ---------------------------------------------------------
-// Map.jsx
-// ---------------------------------------------------------
-//
-// This component is responsible for displaying the Leaflet
-// map and all map-related features.
-//
-// Features included:
-// 1. Display map
-// 2. Fixed marker for our site
-// 3. Popup containing site information
-// 4. Zoom in/out
-// 5. Drag the map
-// 6. Get user's current location
-// 7. Find My Location button
-// 8. Display user's location marker
-//
-// This component DOES NOT need a backend.
-// ---------------------------------------------------------
 
-
-// Import useState from React.
 // We use useState to store the user's current location.
 import { useState } from "react";
 
@@ -38,19 +17,11 @@ import {
 import L from "leaflet";
 
 
-// Import Leaflet CSS.
+// Importing Leaflet CSS.
 // Without this CSS, the map will not display correctly.
 import "leaflet/dist/leaflet.css";
 
 
-
-// ---------------------------------------------------------
-// FIX LEAFLET DEFAULT MARKER ICON
-// ---------------------------------------------------------
-//
-// Sometimes the default Leaflet marker icon does not appear
-// correctly when using React + Vite.
-//
 // This code tells Leaflet where to find its marker images.
 // ---------------------------------------------------------
 
@@ -78,19 +49,15 @@ L.Icon.Default.mergeOptions({
 // This component creates the "Find My Location" button.
 //
 // It uses the browser's built-in Geolocation API.
-// Therefore, NO backend is required.
 // ---------------------------------------------------------
 
 function FindLocationButton({ setUserLocation }) {
-
   // Get access to the Leaflet map.
   const map = useMap();
 
 
-  // -------------------------------------------------------
+ 
   // Function executed when the user clicks the button.
-  // -------------------------------------------------------
-
   const findMyLocation = () => {
 
     // Check whether the browser supports geolocation.
@@ -107,9 +74,8 @@ function FindLocationButton({ setUserLocation }) {
     // Ask the browser for the user's current location.
     navigator.geolocation.getCurrentPosition(
 
-      // ---------------------------------------------------
+     
       // SUCCESS
-      // ---------------------------------------------------
       (position) => {
 
         // Get latitude.
@@ -120,7 +86,6 @@ function FindLocationButton({ setUserLocation }) {
         // Get longitude.
         const longitude =
           position.coords.longitude;
-
 
         // Create an array containing the coordinates.
         const location = [
@@ -148,9 +113,7 @@ function FindLocationButton({ setUserLocation }) {
       },
 
 
-      // ---------------------------------------------------
       // ERROR
-      // ---------------------------------------------------
       (error) => {
 
         console.error(
@@ -165,10 +128,7 @@ function FindLocationButton({ setUserLocation }) {
         );
       },
 
-      // ---------------------------------------------------
       // OPTIONS
-      // ---------------------------------------------------
-
       {
         enableHighAccuracy: true,
         timeout: 10000,
@@ -178,45 +138,31 @@ function FindLocationButton({ setUserLocation }) {
   };
 
 
-  // -------------------------------------------------------
+  
   // BUTTON UI
-  // -------------------------------------------------------
-
   return (
 
     <button
       onClick={findMyLocation}
 
       style={{
-
         position: "absolute",
-
         top: "20px",
-
         right: "20px",
-
         zIndex: 1000,
-
         padding: "12px 18px",
-
         backgroundColor: "white",
-
         border: "none",
-
         borderRadius: "8px",
-
         cursor: "pointer",
-
         fontSize: "15px",
-
         fontWeight: "bold",
-
         boxShadow:
           "0 2px 8px rgba(0,0,0,0.3)",
       }}
     >
 
-      📍 Find My Location
+      📍🤩Find My Location
 
     </button>
   );

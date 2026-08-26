@@ -5,15 +5,13 @@ import{Link} from 'react-router-dom';
 function Navbar() {
     return (
         <nav className="nav"> 
-          
             <div className="logo">
-                <img src="src\assets\logo.png"/>
+                <img src="src\assets\logo.png" alt="LOGO"/>
                 
             </div>
 
 
             <div className="links">
-
                 <Link to="/">Home</Link>
                 <Link to="/about">About us</Link>
                 <Link to="/contact">Contact</Link>
@@ -23,12 +21,10 @@ function Navbar() {
                 
                 {/* <Link to="/requestform">Requestform</Link> */}
                 {/* <Link to="/dashboard">Dashboard</Link> */}
-           
             </div>
         </nav>
     );
 }
-
 // const styles = {
 //     nav: {
 //         display: 'flex',    
@@ -43,5 +39,4 @@ function Navbar() {
 //         gap: '15px',
 //     },
 // };
-
 export default Navbar;
