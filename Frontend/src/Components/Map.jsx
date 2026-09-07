@@ -121,11 +121,8 @@ function FindLocationButton({ setUserLocation }) {
           error
         );
 
-
-        // Inform the user if location access failed.
         alert(
-          "Unable to find your location. Please allow location access in your browser."
-        );
+          "Unable to find your location. Please allow location access in your browser.");
       },
 
       // OPTIONS
@@ -162,32 +159,18 @@ function FindLocationButton({ setUserLocation }) {
       }}
     >
 
-      📍🤩Find My Location
+      Find My Location
 
     </button>
   );
 }
 
 
-
-// ---------------------------------------------------------
 // MAIN MAP COMPONENT
-// ---------------------------------------------------------
 
 function Map() {
 
 
-  // -------------------------------------------------------
-  // FIXED SITE INFORMATION
-  // -------------------------------------------------------
-  //
-  // This is the location of YOUR SITE.
-  //
-  // Example:
-  // University of Dar es Salaam
-  //
-  // You can replace these values with your own site later.
-  // -------------------------------------------------------
 
   const site = {
 
@@ -199,8 +182,8 @@ function Map() {
     description:
       "We deals with technological mecahnical solutions",
 
-    phone:
-      "+255 627496194",
+    phone:"+255 627496194--Email: allyfaki@gmail.com",
+
 
     latitude: -4.987389,
 

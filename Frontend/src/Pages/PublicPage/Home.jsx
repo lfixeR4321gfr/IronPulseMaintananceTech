@@ -20,7 +20,7 @@ function Home() {
       <div className="article">
 
       <div className="Card">
-          <h3>ELECTRICAL CAR DIAGNOSIS </h3>
+          <h3>🚘ELECTRICAL CAR DIAGNOSIS🚖 </h3>
           <img src="src\assets\diag.jpg" alt="Electrical Cars Diagnosis" />
           <p>
             We deal with ECU diagnosis ,Legal bybass,Chips programming,
@@ -36,7 +36,7 @@ function Home() {
 
         
       <div className="Card">
-          <h3> MOTOR WATER PUMP MAINTANANCE </h3>
+          <h3> 🛠️MOTOR WATER PUMP MAINTANANCE </h3>
           <img src="src\assets\MotorTesting.jpg" alt="Moter troubleshooting" />
           <p>
             We deals with motor, waterPump,Ceilling fan troubleshooting and
@@ -47,18 +47,15 @@ function Home() {
       </div>
 
       <div className="Card">
-          <h3>SMART HOME AUTOMATIONS SYSTEMS </h3>
-          <img src="src\assets\Automation.jpeg" alt="Smart Home softlife"/>
+          <h3>🛵ELECTRIC BIKE MOTOR REWINDING🛵 </h3>
+          <img src="src\assets\bike motor 1.jpg" alt="electrical bike"/>
           <p>
-            We deal with IoT system and modern embeded system,
-            such home appliance monitoring
-            Tank water level  monitoring and management 
-            different home automations
+            We deal with bike motor rewinding, for short period of time due to 
+            have skilled technician and modern tools 
           </p>
           <button onClick={() => navigate("/Automation")}>Get started</button>
         
       </div>
-
     </div>
     </div>
   );

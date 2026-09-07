@@ -1,8 +1,13 @@
 import { Routes,Route } from "react-router-dom";
 
+    //Client Routes
 import ClientRoutes from "./Routes/ClientRoutes.jsx";
+
+    //Admin Routes
 import AdminRoutes from "./Routes/AdminRoutes.jsx";
 
+    //Technician Routes
+import TechnicianRoutes from "./Routes/TechnicianRoutes.jsx";
 
             //PUBLIC PAGE 
 import Home from "./Pages/PublicPage/Home.jsx";
@@ -64,6 +69,10 @@ function App() {
 
             //    CLIENT ROUTES
           <Route path="/client/*" element={<ClientRoutes />} />
+
+
+        //  --    TECHNICIAN ROUTES -
+          <Route path="/technician/*" element={<TechnicianRoutes />} />
         
       
     </Routes>

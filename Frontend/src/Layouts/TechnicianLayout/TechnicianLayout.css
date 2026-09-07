@@ -1,7 +1,7 @@
 
-.client-layout {
+.technician-layout {
     display: flex;
-    min-height: 140vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -14,7 +14,7 @@
     min-height: 100vh;
     padding: 30px;
     box-sizing: border-box;
-    background: #eff2f4;
+    background: #e3e7ea;
 }
 
 .sidebar-toggle{
@@ -25,5 +25,6 @@
 }
 
 .sidebar-toggle:hover{
+    
     background: green;
 }

@@ -22,16 +22,12 @@ function AdminSidebar() {
 
         <aside className="admin-sidebar">
 
-            {/*LOGO */}
-
             
             {/* NAVIGATION */}
 
             <nav className="admin-sidebar-nav">
-
-
                 {/*  DASHBOARD */}
-
+                
                 <NavLink to="/admin/dashboard"className={({ isActive }) =>isActive
                             ? "sidebar-link active"
                             : "sidebar-link"}>

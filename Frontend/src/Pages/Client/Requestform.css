@@ -2,7 +2,6 @@
 
 }
  .Request-container{
-    /* background: linear-gradient(rgb(92, 175, 92), rgb(40, 29, 127),rgb(189, 65, 202)); */ 
     background:linear-gradient(rgb(92, 175, 92), rgb(40, 29, 127),rgb(189, 65, 202));
     display: flex;
     min-height: 90vh;
@@ -11,7 +10,6 @@
 }
 .Request-Form{
     background-color: rgb(223, 222, 228);
-    
     width:100%;
     max-width: 450px;
     padding: 2rem;

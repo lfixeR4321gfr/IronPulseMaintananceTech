@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
-import ClientSidebar from "../../Components/Client/ClientSidebar";
-import "./ClientLayout.css";
+import TechnicianSidebar from "../../Components/Technician/TechnicianSidebar";
+
 import { useState } from "react";
 
-function ClientLayout() {
+import "./TechnicianLayout.css";
+function TechnicianLayout() {
     const[sidebarOpen,setSidebarOpen] = useState(false);
     const toggleSidbar = (event)=>{event.stopPropagation();
         setSidebarOpen(!sidebarOpen);
     };
-
 
     const closeSidebar = () => {
         if (sidebarOpen){
@@ -17,11 +17,8 @@ function ClientLayout() {
     };
 
     return (
-        <div className="client-layout">
-        
-
-            {sidebarOpen && <ClientSidebar /> }
-
+        <div className="technician-layout">
+            {sidebarOpen && <TechnicianSidebar /> }
             <main className="client-main" onClick ={closeSidebar}>
 
                 <button className="sidebar-toggle" onClick={()=> setSidebarOpen(!sidebarOpen)}>
@@ -31,8 +28,11 @@ function ClientLayout() {
                 <Outlet />
             </main>
         </div>
+   
     );
 }
 
-export default ClientLayout;
+export default TechnicianLayout;
+
+
 

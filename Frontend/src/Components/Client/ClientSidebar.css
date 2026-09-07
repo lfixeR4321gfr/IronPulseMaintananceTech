@@ -35,12 +35,7 @@
     font-weight: 700;
 }
 
-.logo-text h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 700;
-    color: #080613;
-}
+
 
 .logo-text span {
     font-size: 11px;
@@ -58,6 +53,7 @@ NAVIGATION
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: aliceblue;
 }
 
 
@@ -96,11 +92,8 @@ SIDEBAR LINK
     box-sizing: border-box;
     border-radius: 9px;
     text-decoration: none;
-
-    color: #4b5563;
-
+    color: #065fdd;
     font-size: 14px;
-
     transition: all 0.2s ease;
 }
 
@@ -116,9 +109,8 @@ SIDEBAR LINK
 /* Hover */
 
 .sidebar-link:hover {
-    background: #f3f4f6;
-
-    color: #111827;
+    background: #1b1b1b;
+    color: #d32e62;
 }
 
 
@@ -137,15 +129,11 @@ USER
 .client-sidebar-user {
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     padding: 12px 5px;
-
     border-top: 1px solid #e5e7eb;
-
     margin-top: 10px;
-}X
+}
 
 /* =====================================
 LOGOUT
@@ -154,30 +142,17 @@ LOGOUT
 .client-logout {
     display: flex;
     align-items: center;
-
     gap: 13px;
-
     width: 100%;
-
-
     padding: 11px 13px;
-
     margin-top: 5px;
-
     border: none;
-
     border-radius: 9px;
-
     background: transparent;
-
     color: #6b7280;
-
     cursor: pointer;
-
     font-size: 14px;
-
     text-align: left;
-
     transition: 0.2s ease;
 
 }
@@ -199,7 +174,6 @@ SCROLLBAR
 
 .client-sidebar-nav::-webkit-scrollbar-thumb {
     background: #d1d5db;
-
     border-radius: 10px;
 }
 
@@ -212,9 +186,7 @@ MOBILE
 
     .client-sidebar {
         width: 240px;
-
         transform: translateX(-100%);
-
         transition: transform 0.3s ease;
     }
 

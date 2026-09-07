@@ -14,7 +14,7 @@ function About() {
       </p>
       <div className="schendule-container">
         <div className="schendule">
-          <h2>Our opening schendule</h2>
+          <h2>opening schendule</h2>
           <table border="1">
             
             <thead>
@@ -26,9 +26,6 @@ function About() {
                 <th>hhbcdhhc</th>
                 <th>hcghihecui</th>
                 <th>jhbdc kkdcj</th>
-                
-
-
               </tr>
 
             </thead>

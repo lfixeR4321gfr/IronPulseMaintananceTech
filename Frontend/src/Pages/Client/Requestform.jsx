@@ -8,8 +8,8 @@ function Requestform() {
                 <h2>MAINTENANCE REQUEST FORM </h2>
 
                 <div className="input-group">
-                    <label>Full name</label>
-                    <input type="text" id="name" placeholder="Enter first name"></input>
+                    <label>Organization/Client Full name</label>
+                    <input type="text" id="name" placeholder="Enter name"></input>
 
                     <label>Email</label>
                     <input type="email" id="email" placeholder="Example@gmail.com"></input>
@@ -21,7 +21,7 @@ function Requestform() {
                     <input type="tel" id="phone" placeholder="06xxxxxxxxx"></input>
 
                     <label> Appointment Day</label>
-                    <input type="day" id="time" placeholder="Tell us which day you wish arrive"></input>
+                    <input type="date" id="time" placeholder="Tell us which day you wish to arrive"></input>
 
                     <label> Appointment time</label>
                     <input type="time" id="time" placeholder="Tell us which time you wish arrive"></input>
@@ -32,7 +32,7 @@ function Requestform() {
                     <label>Message</label>
                     {/* <textarea defaultValue="Explan your device problem here..."/>
 {/*  */}
-                    <textarea  id="message"placeholder="Please you can explain your problem here shortly"/>
+                    <textarea  id="message"placeholder="Please you can explain your problem here, shortly"/>
                  
                     {/* <button onClick="Submit()">Submit</button> */}
 

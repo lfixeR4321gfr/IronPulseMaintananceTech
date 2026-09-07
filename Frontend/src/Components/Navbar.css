@@ -17,19 +17,14 @@ nav{
     top: 0%;  
 }
 
+
 .logo img{
     width: 140px;
     height: 50px;
     
 
 }
-/* .title{
-    background-image: ;
-    color: aqua;
-    font-size: 3rem;
-    font-weight: bold;
-    
-} */
+
 .links a{
     text-decoration: none;
     color:white;
@@ -44,6 +39,11 @@ nav{
 .links a:hover{
 color: rgb(4, 195, 4);
 margin: 1rem;
+
+}
+
+.links a .active{
+color: rgb(241, 12, 20);
 
 }
 

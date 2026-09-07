@@ -28,7 +28,7 @@ function ClientSidebar() {
             <div className="client-sidebar-logo">
 
                 <div className="logo-icon">
-                    IP
+                    CY
                 </div>
 
                 <div className="logo-text">
@@ -154,7 +154,7 @@ function ClientSidebar() {
                     </NavLink>
                 </div>
 
-            </nav>
+            
 
 
 
@@ -171,6 +171,8 @@ function ClientSidebar() {
 
             </button>
 
+
+                </nav>
         </aside>
 
     );
