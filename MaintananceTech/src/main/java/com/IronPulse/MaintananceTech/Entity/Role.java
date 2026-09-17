@@ -1,9 +1,8 @@
-package com.ironpulse.entity;
+package com.IronPulse.MaintananceTech.Entity;
 
 public enum Role {
 
-    CLIENT,
     ADMIN,
-    TECHNICIAN
-
+    TECHNICIAN,
+    CLIENT
 }

@@ -1,208 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.IronPulse</groupId>
-	<artifactId>MaintananceTech</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>21</java.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ========================================================= -->
+    <!-- BASIC PROJECT INFORMATION                                 -->
+    <!-- ========================================================= -->
+
+    <!-- Maven model version -->
+    <modelVersion>4.0.0</modelVersion>
 
 
+    <!-- ========================================================= -->
+    <!-- SPRING BOOT PARENT                                        -->
+    <!-- ========================================================= -->
 
-
-
-
-
-
-
-
-
-
-
-<dependencies>
-
-    <!-- Spring Web -->
-    <dependency>
+    <!--
+        Spring Boot parent manages many dependency versions
+        and provides sensible Maven defaults.
+    -->
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <!-- JPA -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-
-    <!-- Security -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-
-    <!-- Validation -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-
-    <!-- PostgreSQL -->
-    <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <scope>runtime</scope>
-    </dependency>
-
-    <!-- JWT -->
-    <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt-api</artifactId>
-        <version>0.12.6</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt-impl</artifactId>
-        <version>0.12.6</version>
-        <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt-jackson</artifactId>
-        <version>0.12.6</version>
-        <scope>runtime</scope>
-    </dependency>
-
-</dependencies>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.7</version>
+        <relativePath/>
+    </parent>
 
 
+    <!-- ========================================================= -->
+    <!-- PROJECT INFORMATION                                       -->
+    <!-- ========================================================= -->
+
+    <!--
+        IMPORTANT:
+        We use IronPulse exactly as requested:
+        I = uppercase
+        P = uppercase
+    -->
+    <groupId>com.IronPulse</groupId>
+
+    <!-- Name of our application -->
+    <artifactId>MaintananceTech</artifactId>
+
+    <!-- Current project version -->
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- Human-readable project name -->
+    <name>MaintananceTech</name>
+
+    <!-- Project description -->
+    <description>Maintenance Management System</description>
 
 
+    <!-- ========================================================= -->
+    <!-- PROJECT PROPERTIES                                        -->
+    <!-- ========================================================= -->
+
+    <properties>
+
+        <!-- Java version used by the project -->
+        <java.version>21</java.version>
+
+        <!--
+            Explicitly identifies the main Spring Boot class.
+        -->
+        <start-class>
+            com.IronPulse.MaintananceTech.MaintananceTechApplication
+        </start-class>
+
+    </properties>
 
 
+    <!-- ========================================================= -->
+    <!-- DEPENDENCIES                                               -->
+    <!-- ========================================================= -->
+
+    <dependencies>
 
 
+        <!-- ===================================================== -->
+        <!-- SPRING WEB                                             -->
+        <!-- ===================================================== -->
+
+        <!--
+            Used to create REST APIs.
+
+            React frontend will communicate with
+            these REST APIs.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
 
+        <!-- ===================================================== -->
+        <!-- SPRING DATA JPA                                        -->
+        <!-- ===================================================== -->
+
+        <!--
+            Allows our Java application to communicate
+            with the database using JPA/Hibernate.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
 
+        <!-- ===================================================== -->
+        <!-- VALIDATION                                             -->
+        <!-- ===================================================== -->
+
+        <!--
+            Used to validate incoming data.
+
+            Examples:
+            - Required fields
+            - Valid email
+            - Password rules
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 
 
+        <!-- ===================================================== -->
+        <!-- POSTGRESQL DATABASE DRIVER                              -->
+        <!-- ===================================================== -->
+
+        <!--
+            Allows Spring Boot to connect to PostgreSQL.
+
+            We will configure the actual database connection
+            later in application.properties.
+        -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
 
+        <!-- ===================================================== -->
+        <!-- SPRING SECURITY                                        -->
+        <!-- ===================================================== -->
+
+        <!--
+            Used later for:
+            - Login
+            - Authentication
+            - Authorization
+            - Role-based access
+
+            Our planned roles are:
+            ADMIN
+            TECHNICIAN
+            CLIENT
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
 
+        <!-- ===================================================== -->
+        <!-- JWT API                                                 -->
+        <!-- ===================================================== -->
+
+        <!--
+            JWT will later be used for secure authentication
+            between React and Spring Boot.
+        -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.12.6</version>
+        </dependency>
 
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <!-- ===================================================== -->
+        <!-- JWT IMPLEMENTATION                                      -->
+        <!-- ===================================================== -->
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <!--
+            Runtime implementation of JWT functionality.
+        -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.12.6</version>
+            <scope>runtime</scope>
+        </dependency>
 
-	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-compile</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-						<configuration>
-							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
-							</annotationProcessorPaths>
-						</configuration>
-					</execution>
-					<execution>
-						<id>default-testCompile</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>testCompile</goal>
-						</goals>
-						<configuration>
-							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
-							</annotationProcessorPaths>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+        <!-- ===================================================== -->
+        <!-- JWT JACKSON SUPPORT                                    -->
+        <!-- ===================================================== -->
+
+        <!--
+            Allows JWT to work with JSON serialization.
+        -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>0.12.6</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- ===================================================== -->
+        <!-- LOMBOK                                                  -->
+        <!-- ===================================================== -->
+
+        <!--
+            Lombok reduces repetitive Java code such as:
+            getters
+            setters
+            constructors
+        -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+
+        <!-- ===================================================== -->
+        <!-- TESTING                                                 -->
+        <!-- ===================================================== -->
+
+        <!--
+            Provides testing tools such as:
+            - JUnit
+            - Spring Boot Test
+            - Mockito
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- ========================================================= -->
+    <!-- BUILD CONFIGURATION                                       -->
+    <!-- ========================================================= -->
+
+    <build>
+
+        <plugins>
+
+
+            <!-- ================================================= -->
+            <!-- SPRING BOOT MAVEN PLUGIN                           -->
+            <!-- ================================================= -->
+
+            <!--
+                Used to:
+                - Run the Spring Boot application
+                - Package the application
+            -->
+            <plugin>
+
+                <groupId>org.springframework.boot</groupId>
+
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+
+                    <!--
+                        Explicitly tells Maven which class
+                        starts our Spring Boot application.
+
+                        IMPORTANT:
+                        IronPulse = I uppercase + P uppercase.
+                    -->
+                    <mainClass>
+                        com.IronPulse.MaintananceTech.MaintananceTechApplication
+                    </mainClass>
+
+                </configuration>
+
+            </plugin>
+
+
+            <!-- ================================================= -->
+            <!-- MAVEN COMPILER PLUGIN                              -->
+            <!-- ================================================= -->
+
+            <!--
+                Configures Java compilation.
+                It also enables Lombok annotation processing.
+            -->
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-compiler-plugin</artifactId>
+
+
+                <executions>
+
+
+                    <!-- ========================================= -->
+                    <!-- COMPILE MAIN APPLICATION                   -->
+                    <!-- ========================================= -->
+
+                    <execution>
+
+                        <id>default-compile</id>
+
+                        <phase>compile</phase>
+
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+
+
+                        <configuration>
+
+                            <!--
+                                Enable Lombok annotation processing
+                                for the main application.
+                            -->
+                            <annotationProcessorPaths>
+
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                </path>
+
+                            </annotationProcessorPaths>
+
+                        </configuration>
+
+                    </execution>
+
+
+                    <!-- ========================================= -->
+                    <!-- COMPILE TEST CLASSES                       -->
+                    <!-- ========================================= -->
+
+                    <execution>
+
+                        <id>default-testCompile</id>
+
+                        <phase>test-compile</phase>
+
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+
+
+                        <configuration>
+
+                            <!--
+                                Enable Lombok annotation processing
+                                for test classes.
+                            -->
+                            <annotationProcessorPaths>
+
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                </path>
+
+                            </annotationProcessorPaths>
+
+                        </configuration>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
 
 </project>
