@@ -2,9 +2,7 @@ package com.IronPulse.MaintananceTech.Repository;
 
 import com.IronPulse.MaintananceTech.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.Optional;
-
 /*
  * UserRepository
  *
@@ -15,7 +13,6 @@ import java.util.Optional;
  * kama save, find, delete, n.k.
  */
 public interface UserRepository extends JpaRepository<User, Long> {
-
     /*
      * Kutafuta user kwa kutumia email.
      *

@@ -8,66 +8,92 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-/*
- * Security configuration for the IronPulse MaintenanceTech application.
- *
- * For now, authentication is not required because we are still
- * testing user registration and password hashing.
- *
- * JWT authentication will be added later.
- */
+import java.util.List;
+
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-    /*
-     * Configure Spring Security's HTTP security rules.
-     */
+    /* Configure HTTP security.*/
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
+    public SecurityFilterChain securityFilterChain(
+            HttpSecurity http) throws Exception {
         http
-                /*
-                 * Disable CSRF because this application uses REST APIs.
-                 */
+
+                /* Enable CORS.This allows our React frontend to communicate with Spring Boot.*/
+                .cors(cors -> {})
+
+                /* Disable CSRF */
                 .csrf(csrf -> csrf.disable())
 
-                /*
-                 * Disable server-side sessions.
-                 *
-                 * Later, JWT will be responsible for authentication.
-                 */
+                /*Disable server-side sessions. Later JWT will handle authentication.*/
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        .sessionCreationPolicy(
+                                SessionCreationPolicy.STATELESS
+                        )
                 )
 
-                /*
-                 * Allow the User API to be accessed without authentication
-                 * for now.
-                 *
-                 * This is temporary and will be changed when
-                 * JWT authentication is implemented.
-                 */
+                /* For now, allow our API requests. These rules will become stricter when JWT authentication is implemented. */
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/users/**").permitAll()
                         .anyRequest().permitAll()
                 );
-
         return http.build();
     }
 
-    /*
-     * PasswordEncoder bean.
-     *
-     * BCrypt will hash passwords before they are stored
-     * in the PostgreSQL database.
-     *
-     * UserService will automatically receive this bean
-     * through constructor injection.
-     */
+
+    /*  PasswordEncoder bean. BCrypt hashes passwords before they are stored in Postgress */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+
+    /*
+     * CORS configuration. Our React application runs on: http://localhost:5173
+     *
+     * Our Spring Boot application runs on: http://localhost:8080
+     *
+     * Because they use different ports,  we need to allow the React origin. */
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration =
+                new CorsConfiguration();
+
+        /* Allow requests from React.*/
+        configuration.setAllowedOrigins(
+                List.of("http://localhost:5174")
+        );
+
+        /* Allowing these HTTP methods */
+        configuration.setAllowedMethods(
+                List.of(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "OPTIONS"
+                )
+        );
+
+        /* Allow all request headers.*/
+        configuration.setAllowedHeaders(
+                List.of("*")
+        );
+
+        /* Apply this CORS configuration to all API endpoints.*/
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
+
+        source.registerCorsConfiguration(
+                "/**",
+                configuration
+        );
+        return source;
     }
 }

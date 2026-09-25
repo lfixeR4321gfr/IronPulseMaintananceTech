@@ -77,7 +77,6 @@ import com.IronPulse.MaintananceTech.Entity.User;
 import com.IronPulse.MaintananceTech.Repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 /*
@@ -98,22 +97,13 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    /*
-     * Repository used to communicate with the database.
-     */
+    /* Repository used to communicate with the database. */
     private final UserRepository userRepository;
 
-    /*
-     * PasswordEncoder is used to securely hash
-     * the user's password before saving it.
-     */
+    /* PasswordEncoder is used to securely hash, the user's password before saving it.*/
     private final PasswordEncoder passwordEncoder;
 
-    /*
-     * Constructor Injection
-     *
-     * Spring will provide both dependencies automatically.
-     */
+    /* Constructor Injection Spring will provide both dependencies automatically.*/
     public UserService(
             UserRepository userRepository,
             PasswordEncoder passwordEncoder) {
@@ -122,36 +112,22 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    /*
-     * Save a new user.
-     *
-     * Before saving the user, we encode the password.
-     */
+    /*  Save a new user. Before saving the user, we encode the password.*/
     public User saveUser(User user) {
 
-        /*
-         * Get the plain-text password entered by the user.
-         */
+        /* Get the plain-text password entered by the user.*/
         String encodedPassword =
                 passwordEncoder.encode(user.getPassword());
 
-        /*
-         * Replace the plain-text password with
-         * the encoded password.
-         */
+        /*Replace the plain-text password with, the encoded password. */
         user.setPassword(encodedPassword);
 
-        /*
-         * Save the user with the encoded password.
-         */
+        /* Save the user with the encoded password.*/
         return userRepository.save(user);
     }
 
-    /*
-     * Find a user by email.
-     */
+    /* Find a user by email.*/
     public Optional<User> findUserByEmail(String email) {
-
         return userRepository.findByEmail(email);
     }
 }

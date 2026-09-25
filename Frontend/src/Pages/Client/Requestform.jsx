@@ -12,7 +12,7 @@ function Requestform() {
                     <input type="text" id="name" placeholder="Enter name"></input>
 
                     <label>Email</label>
-                    <input type="email" id="email" placeholder="Example@gmail.com"></input>
+                    <input type="email" id="email" placeholder="Example@gmail.com/ option"></input>
 
                     <label>Address</label>
                     <input type="text" id="address" placeholder="Enter your Address"></input>

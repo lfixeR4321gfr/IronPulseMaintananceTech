@@ -7,13 +7,12 @@ import org.hibernate.annotations.CreationTimestamp;
 
 /*
  * User Entity
- *
- * Hii class itawakilisha mtumiaji mmoja kwenye database.
- *
+
  * Kwa mfumo wetu tutakuwa na users wenye roles:
  * ADMIN
  * TECHNICIAN
  * CLIENT
+ * registered data and last login
  */
 @Entity
 @Table(name = "users")

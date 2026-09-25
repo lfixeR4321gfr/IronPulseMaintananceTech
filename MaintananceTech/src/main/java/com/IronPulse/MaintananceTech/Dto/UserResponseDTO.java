@@ -1,42 +1,21 @@
 package com.IronPulse.MaintananceTech.Dto;
-
 import com.IronPulse.MaintananceTech.Entity.Role;
-
 import java.time.LocalDateTime;
 
-/*
- * UserResponseDTO
- *
- * This DTO defines the user information that
- * is safe to return to the frontend.
- *
- * Notice that the password is intentionally
- * NOT included here.
- */
+//This DTO defines the user information that is safe to return to the frontend.
 public class UserResponseDTO {
-
     private Long id;
-
     private String fullName;
-
     private String email;
-
     private Role role;
-
     private LocalDateTime createdAt;
-
     private LocalDateTime lastLogin;
 
-    /*
-     * Empty constructor.
-     */
+    /*Empty constructor.*/
     public UserResponseDTO() {
     }
 
-    /*
-     * Constructor used to create the DTO
-     * from user information.
-     */
+    /*Constructor used to create the DTO from user information.*/
     public UserResponseDTO(
             Long id,
             String fullName,
@@ -53,6 +32,8 @@ public class UserResponseDTO {
         this.lastLogin = lastLogin;
     }
 
+
+//creating getter for our
     public Long getId() {
         return id;
     }
